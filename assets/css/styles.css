@@ -336,6 +336,15 @@ body {
   }
 }
 
+/* Carta (texto tipeado) */
+#typed,
+.typed {
+  white-space: pre-line;
+  /* respeta los Enters del string */
+  line-height: 1.6;
+  /* (opcional) hace el texto más legible */
+}
+
 /* Responsivo */
 @media (max-width:900px) {
   .grid {

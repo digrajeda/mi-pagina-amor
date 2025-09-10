@@ -57,7 +57,6 @@ function startTypedLetter() {
 
 Contigo aprendí que un abrazo puede sentirse como casita y que reír es mi idioma favorito cuando estás cerca. Eres mi lugar seguro, la pausa bonita en medio del ruido. Gracias por hacer que los días normales se vuelvan extraordinarios y por esa forma tuya de mirarme que hace que todo tenga sentido.
 
-
 Me gusta cómo nos encontramos en los detalles: las manos que se buscan sin pensarlo, las miradas, las conversaciones que se alargan aunque ya sepamos el final. Me haces mejor persona, más paciente, más valiente, más yo.
 
 Prometo cuidar lo nuestro con acciones pequeñas y constantes: celebrar tus logros como míos, acompañarte cuando lo difícil se asome, escucharte de verdad, preguntar cómo estás y quedarme para escuchar la respuesta. Prometo respetar tus tiempos, tus sueños y tu paz, reírnos, bailar aunque no sepamos y elegirte cada día.
