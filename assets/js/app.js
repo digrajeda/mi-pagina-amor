@@ -57,20 +57,16 @@ function startTypedLetter() {
 
 Contigo aprendí que un abrazo puede sentirse como casita y que reír es mi idioma favorito cuando estás cerca. Eres mi lugar seguro, la pausa bonita en medio del ruido. Gracias por hacer que los días normales se vuelvan extraordinarios y por esa forma tuya de mirarme que hace que todo tenga sentido.
 
-
 Me gusta cómo nos encontramos en los detalles: las manos que se buscan sin pensarlo, las miradas, las conversaciones que se alargan aunque ya sepamos el final. Me haces mejor persona, más paciente, más valiente, más yo.
-
 
 Prometo cuidar lo nuestro con acciones pequeñas y constantes: celebrar tus logros como míos, acompañarte cuando lo difícil se asome, escucharte de verdad, preguntar cómo estás y quedarme para escuchar la respuesta. Prometo respetar tus tiempos, tus sueños y tu paz, reírnos, bailar aunque no sepamos y elegirte cada día.
 
-
 Sueño con los planes que todavía no escribimos: desayunos sin prisa, viajes chiquitos, películas a medias, caminatas largas, fotos borrosas y también tremendas playlists que en el futuro nos devuelvan a este instante, metas que iremos tachando juntitos.
-
 
 Gracias por tu paciencia, por tu humor, por tus abrazos que arreglan días enteros, por creer en nosotros incluso cuando el mundo corre. Gracias por quedarte, por empujarme hacia mis mejores versiones y por hacerme sentir querida sin condiciones.
 
-
-Por más comidas, películas, risas compartidas, canciones a destiempo y besitos que curan todo. Lo que venga, contigo. Te amo con todo mi corazón.`;
+Por más comidas, películas, risas compartidas, canciones a destiempo y besitos que curan todo. Lo que venga, contigo. Te amo con todo mi corazón.`
+    ;
   let i = 0, speed = 18;
   (function tipo() { if (i <= texto.length) { el.textContent = texto.slice(0, i); i++; setTimeout(tipo, speed); } })();
 }
