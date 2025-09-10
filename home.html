@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Feliz 4 meses ✨</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <meta name="theme-color" content="#ff6b9a" />
+</head>
+
+<body>
+  <!-- Guard: si no pasó por la clave, redirige -->
+  <script>
+    if (sessionStorage.getItem("unlocked") !== "1") {
+      location.replace("index.html");
+    }
+  </script>
+
+  <!-- Fondo corazones -->
+  <div id="bg-hearts" aria-hidden="true"></div>
+
+  <!-- Topbar -->
+  <header id="topbar">
+    <div class="brand">💞 <span id="brandNames">Nosotros</span></div>
+    <nav id="menu">
+      <button id="menuToggle" class="hamburger" aria-label="Abrir menú">☰</button>
+      <ul id="menuList">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#carta">Carta</a></li>
+        <li><a href="#galeria">Galería</a></li>
+        <li><a href="#momentos">Momentos</a></li>
+        <li><a href="#creditos">Créditos</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="app">
+    <!-- Inicio -->
+    <section id="inicio" class="section hero">
+      <h2 class="reveal">Feliz <span id="mesesText">4</span> meses, <span id="nombreCorto">amor</span> ✨</h2>
+      <p class="sub reveal">Llevamos <strong id="diasJuntos">—</strong> días juntitos</p>
+      <div class="btns reveal">
+        <a href="#carta" class="btn">Leer la carta 💌</a>
+        <button id="btnPlay" class="btn secundario">Reproducir música ▶</button>
+      </div>
+    </section>
+
+    <!-- Carta -->
+    <section id="carta" class="section card">
+      <h3>💌 Carta para ti</h3>
+      <div id="typed" class="typed"></div>
+      <div class="firma">Con amor, <span id="firmaNombre">TuNombre</span> ♡</div>
+    </section>
+
+    <!-- Galería -->
+    <section id="galeria" class="section">
+      <h3 class="center">📷 Nuestra galería</h3>
+      <div class="grid">
+        <img src="assets/img/foto1.svg" alt="Foto 1" class="thumb reveal" />
+        <img src="assets/img/foto2.svg" alt="Foto 2" class="thumb reveal" />
+        <img src="assets/img/foto3.svg" alt="Foto 3" class="thumb reveal" />
+        <img src="assets/img/foto4.svg" alt="Foto 4" class="thumb reveal" />
+        <img src="assets/img/foto5.svg" alt="Foto 5" class="thumb reveal" />
+        <img src="assets/img/foto6.svg" alt="Foto 6" class="thumb reveal" />
+        <img src="assets/img/foto7.svg" alt="Foto 7" class="thumb reveal" />
+        <img src="assets/img/foto8.svg" alt="Foto 8" class="thumb reveal" />
+      </div>
+    </section>
+
+    <!-- Momentos -->
+    <section id="momentos" class="section card">
+      <h3>🗓️ Nuestra historia</h3>
+      <ul class="timeline">
+        <li class="reveal"><span class="date">Día 1</span> Nos conocimos y supe que algo hermoso estaba empezando.</li>
+        <li class="reveal"><span class="date">Primeras citas</span> Risas, miradas cómplices y nervios bonitos.</li>
+        <li class="reveal"><span class="date">Primer viaje</span> Fotos, abrazos y mil anécdotas para recordar.</li>
+        <li class="reveal"><span class="date">Hoy</span> Gracias por estos meses. Vamos por todo lo que viene, juntitos.
+          💖</li>
+      </ul>
+    </section>
+
+    <!-- Créditos -->
+    <section id="creditos" class="section center">
+      <p class="sutil">Hecho con ♥ por <span id="hechoPor"></span> Dianita. Si llegaste hasta aquí, te debo un abrazo
+        extra. 🤍</p>
+    </section>
+  </main>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox hidden" role="dialog" aria-modal="true" aria-label="Vista de imagen">
+    <button id="closeLightbox" class="close" aria-label="Cerrar">×</button>
+    <img id="lightboxImg" src="" alt="Foto ampliada" />
+  </div>
+
+  <!-- Música (opcional) -->
+  <audio id="audio" src="assets/music/music.mp3" preload="none"></audio>
+
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+
+</html>

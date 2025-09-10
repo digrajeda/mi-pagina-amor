@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+  <defs>
+    <linearGradient id="g3" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffb3c6"/>
+      <stop offset="100%" stop-color="#ffe5ec"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#g3)"/>
+  <g transform="translate(600,380)">
+    <path d="M0-60 C-40-100 -120-80 -120-10 C-120 50 -40 90 0 130 C40 90 120 50 120 -10 C120-80 40-100 0-60 Z"
+          fill="#ff4d6d" opacity="0.9"/>
+  </g>
+  <text x="50%" y="85%" dominant-baseline="middle" text-anchor="middle" font-family="Arial, sans-serif" font-size="48" fill="#b0003a">
+    Reemplaza por tu foto 3
+  </text>
+</svg>

@@ -1,0 +1,369 @@
+:root {
+  --bg: #fff0f6;
+  --card: #fff;
+  --ink: #571c2d;
+  --muted: #7a4052;
+  --acc: #ff6b9a;
+  --acc-2: #ff91af;
+  --shadow: 0 10px 30px rgba(87, 28, 45, .15);
+  --radius: 16px;
+}
+
+* {
+  box-sizing: border-box
+}
+
+html,
+body {
+  height: 100%
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: var(--ink);
+  background: var(--bg);
+  overflow-x: hidden;
+  scroll-behavior: smooth
+}
+
+/* Gate */
+.gate-body #gate {
+  max-width: 560px;
+  margin: 60px auto 24px;
+  text-align: center
+}
+
+.gate-row {
+  display: flex;
+  gap: 10px;
+  justify-content: center
+}
+
+#gate input {
+  flex: 1 1 240px;
+  border-radius: 12px;
+  border: 2px solid #ffd6e5;
+  padding: 12px 14px;
+  font-size: 16px;
+  outline: none
+}
+
+#gate button {
+  padding: 12px 16px;
+  border-radius: 12px;
+  border: none;
+  background: var(--acc);
+  color: #fff;
+  cursor: pointer
+}
+
+.hint,
+.sutil {
+  color: var(--muted);
+  font-size: 14px
+}
+
+/* Topbar */
+#topbar {
+  position: sticky;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 16px;
+  background: rgba(255, 240, 246, .85);
+  backdrop-filter: blur(6px);
+  box-shadow: var(--shadow);
+  z-index: 20
+}
+
+.brand {
+  font-weight: 600
+}
+
+#menu {
+  position: relative
+}
+
+#menuList {
+  display: flex;
+  list-style: none;
+  gap: 12px;
+  margin: 0;
+  padding: 0
+}
+
+#menuList a {
+  text-decoration: none;
+  color: var(--ink);
+  padding: 8px 10px;
+  border-radius: 10px
+}
+
+#menuList a:hover {
+  background: rgba(255, 255, 255, .7)
+}
+
+.hamburger {
+  display: none;
+  background: transparent;
+  border: none;
+  font-size: 22px;
+  cursor: pointer
+}
+
+/* Secciones */
+.section {
+  padding: 56px 20px
+}
+
+.center {
+  text-align: center
+}
+
+.card {
+  max-width: 900px;
+  margin: 24px auto;
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 28px;
+  box-shadow: var(--shadow)
+}
+
+.hero {
+  text-align: center;
+  padding-top: 64px
+}
+
+.hero h2 {
+  font-size: clamp(26px, 5vw, 44px);
+  margin: 0 0 8px
+}
+
+.sub {
+  color: var(--muted);
+  margin: 8px 0 18px
+}
+
+.btns {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap
+}
+
+.btn {
+  background: linear-gradient(135deg, var(--acc), var(--acc-2));
+  color: white;
+  border: none;
+  border-radius: 999px;
+  padding: 12px 18px;
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform .15s ease
+}
+
+.btn:hover {
+  transform: translateY(-1px)
+}
+
+.btn.secundario {
+  background: #fff;
+  color: var(--ink);
+  border: 2px solid var(--acc)
+}
+
+/* Galería */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  max-width: 1100px;
+  margin: 0 auto
+}
+
+.thumb {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  transition: transform .2s ease, box-shadow .2s ease
+}
+
+.thumb:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 36px rgba(87, 28, 45, .22)
+}
+
+/* Lightbox */
+/* --- Lightbox (FIX) --- */
+#lightbox.hidden {
+  display: none !important;
+}
+
+/* esto sí lo oculta al iniciar */
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, .6);
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  z-index: 50;
+}
+
+.lightbox img {
+  width: min(92vw, 1200px);
+  max-height: 86vh;
+  object-fit: contain;
+  border-radius: 14px;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, .4);
+  background: #fff;
+  position: relative;
+  /* ↓ asegura orden de apilado */
+  z-index: 1;
+}
+
+.close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 44px;
+  height: 44px;
+  font-size: 32px;
+  background: #fff;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  z-index: 2;
+  /* ↑ la X queda por encima de la imagen */
+}
+
+/* Timeline */
+.timeline {
+  list-style: none;
+  padding-left: 0;
+  margin: 0
+}
+
+.timeline li {
+  position: relative;
+  padding-left: 26px;
+  margin: 12px 0
+}
+
+.timeline li::before {
+  content: '';
+  position: absolute;
+  left: 8px;
+  top: 10px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--acc);
+  box-shadow: 0 0 0 4px rgba(255, 107, 154, .25)
+}
+
+.timeline .date {
+  font-weight: 600;
+  margin-right: 6px;
+  color: var(--ink)
+}
+
+/* Reveal on scroll */
+.reveal {
+  opacity: 0;
+  transform: translateY(12px);
+  transition: all .6s ease
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0)
+}
+
+/* Fondo corazones */
+#bg-hearts {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  z-index: -1
+}
+
+.heart {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  transform: rotate(45deg);
+  animation: floatUp linear forwards;
+  background: var(--acc)
+}
+
+.heart::before,
+.heart::after {
+  content: '';
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background: var(--acc);
+  border-radius: 50%
+}
+
+.heart::before {
+  left: -6px
+}
+
+.heart::after {
+  top: -6px
+}
+
+@keyframes floatUp {
+  from {
+    transform: translateY(0) rotate(45deg);
+    opacity: .8
+  }
+
+  to {
+    transform: translateY(-120vh) rotate(45deg);
+    opacity: 0
+  }
+}
+
+/* Responsivo */
+@media (max-width:900px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr)
+  }
+
+  #menuList {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 42px;
+    background: #fff;
+    padding: 10px;
+    border-radius: 12px;
+    box-shadow: var(--shadow)
+  }
+
+  #menuList.open {
+    display: block
+  }
+
+  .hamburger {
+    display: inline-block
+  }
+}
+
+@media (max-width:520px) {
+  .grid {
+    grid-template-columns: 1fr
+  }
+}
